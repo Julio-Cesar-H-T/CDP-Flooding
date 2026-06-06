@@ -5,6 +5,7 @@
 
 Demostrar cómo un atacante puede saturar la tabla de vecinos CDP (*Cisco Discovery Protocol*) de un switch Cisco, provocando un consumo excesivo de CPU y memoria que degrada o interrumpe el funcionamiento normal del dispositivo.
 
+Link a la lista de reproducción: https://www.youtube.com/playlist?list=PL1bMSHFyMPr7W7DrFd-INmRRQDjGquFIV
 ---
 
 ## 📋 Objetivo del Script
@@ -127,17 +128,6 @@ sudo python3 CDP_DoS.py   # Requiere root para abrir socket L2
 | Kali (atacante) | 192.168.10.50 | 10 |
 | VPC-1, VPC-4 | DHCP 192.168.10.100+ | 10 |
 | VPC-2, VPC-3 | DHCP 192.168.20.100+ | 20 |
-
----
-
-## 📸 Capturas de Pantalla
-
-> Insertar capturas en esta sección:
-
-1. **`img/01_antes_ataque.png`** — `show cdp neighbors` en SW-1 antes del ataque (solo R1 y switches legítimos).
-2. **`img/02_script_corriendo.png`** — Terminal de Kali con el script en ejecución mostrando los vecinos inyectados.
-3. **`img/03_tabla_cdp_saturada.png`** — `show cdp neighbors` en SW-1 durante el ataque (entradas falsas ROUTER-XXXXXX).
-4. **`img/04_cpu_switch.png`** — `show processes cpu | include CDP` mostrando el incremento de uso de CPU.
 
 ---
 
